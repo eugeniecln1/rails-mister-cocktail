@@ -1,8 +1,14 @@
-<h1>All cocktails</h1>
+<br>
 <% @cocktails.each do |cocktail| %>
-  <ul>
-    <li><%= cocktail.name %> <%= link_to 'Show', cocktail %></li>
-  </ul>
+  <div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+    <div class="card-product-infos">
+      <ul>
+        <li><%= cocktail.name %> <%= link_to 'Show', cocktail %></li>
+      </ul>
+    </div>
+  </div>
+  <br>
 <% end %>
 
 <%= link_to "New", new_cocktail_path %>
