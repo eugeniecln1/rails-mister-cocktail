@@ -1,8 +1,7 @@
 <br>
 <% @cocktails.each do |cocktail| %>
   <div class="card-product">
-  <%= cl_image_tag("l8huvdrxmva4sw9eghi7",
-      width: 400, height: 300, crop: :fill) %>
+    <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill if cocktail.photo.present?%>
     <div class="card-product-infos">
       <ul>
         <p>🍸<%= cocktail.name %> <%= link_to 'Show', cocktail %></p>
