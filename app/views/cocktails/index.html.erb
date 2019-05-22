@@ -1,7 +1,8 @@
 <br>
 <% @cocktails.each do |cocktail| %>
   <div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+  <%= cl_image_tag("l8huvdrxmva4sw9eghi7",
+      width: 400, height: 300, crop: :fill) %>
     <div class="card-product-infos">
       <ul>
         <p>🍸<%= cocktail.name %> <%= link_to 'Show', cocktail %></p>
